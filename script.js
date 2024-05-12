@@ -55,6 +55,13 @@ class Paper{
 
 const papers = Array.from(document.querySelectorAll(".paper"))
 
+const audio = new Audio('./audio.mp3')
+
+papers[papers.length-1].addEventListener("click", ()=>{
+    audio.play();
+})
+
+
 papers.forEach((paper)=>{
     const p = new Paper();
     p.init(paper);
